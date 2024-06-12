@@ -1,0 +1,121 @@
+@import 'vars';
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+  
+    a {
+      color: $text;
+      padding: 1rem;
+      text-decoration: none;
+    }
+  }
+  
+  nav+div {
+    overflow: hidden;
+    section{
+      width: 100%;
+      padding: 2rem 0;
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+      align-items: flex-start;
+      .content{
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        h2 {
+          color: #FFFFFF; 
+          font-size: 10rem;
+          
+  
+          strong{
+            transition: color 0.5s ease;
+            color: $main;
+          }
+        }
+        
+        p {
+          color: #FFFFFF; 
+          font-size: 1rem; 
+        }
+      
+        a {
+          color: $secondary;
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: 1px solid $main;
+          display: block;
+          width: fit-content;
+          @include transition(140ms, ease, background-color, color);
+          
+          &:hover {
+            background-color: $main;
+            color: #000; 
+          }
+        }
+
+      }
+      img{
+        mix-blend-mode: luminosity;
+        width: 100%;
+        height: 200px;
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .about,
+  .projects,
+  .contact {
+    padding: 2rem 0;
+  }
+  
+  .projects {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .contact {
+    form {
+      max-width: 600px;
+      margin: auto;
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        margin: 0.5rem 0;
+      }
+  
+      button {
+        padding: 1rem 2rem;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  

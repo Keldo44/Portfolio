@@ -1,0 +1,39 @@
+//Importem la font Monserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "../node_modules/bootstrap-scss/bootstrap.scss";
+
+// Ajuda per les animacions de hover
+@mixin transition($duration, $timing-function, $properties...) {
+    $transitions: ();
+
+    @each $property in $properties {
+        $transitions: $transitions, $property $duration $timing-function;
+    }
+
+    transition: $transitions;
+}
+  
+
+// Color Palette
+$background: #333333; // Dark grey
+$main: #00a8a8; // Medium turquoise
+$secondary: #00ffff; // Medium cyan
+$accent: #007f7f; // Dark turquoise
+$text: #f4f4f4; // Light grey
+$muted: #cccccc; // Medium grey
+
+// Shades of grey
+$grey-light: #f4f4f4;
+$grey-medium: #cccccc;
+$grey-dark: #333333;
+
+// Shades of turquoise
+$turquoise-light: #a0e7e5;
+$turquoise-medium: #00a8a8;
+$turquoise-dark: #007f7f;
+
+// Shades of cyan
+$cyan-light: #e0ffff;
+$cyan-medium: #00ffff;
+$cyan-dark: #00b3b3;
